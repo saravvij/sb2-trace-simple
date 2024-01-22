@@ -1,0 +1,13 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} | %thread | %logger | Service:%X{X-Service-Name} | TraceId:%X{X-Trace-ID} | SpanId:%X{X-Span-ID} | X-Client-Request-ID:%X{X-Client-Request-ID} | Tracepath:%X{X-Trace-Path} | Domain:%X{X-Domain} | Level:%level | message:%msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
